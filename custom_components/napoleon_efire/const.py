@@ -17,6 +17,15 @@ UNSUPPORTED_FEATURES = ["timer"]
 UPDATE_INTERVAL = timedelta(seconds=30)
 UPDATE_TIMEOUT = 15  # seconds
 
+# Flame height, as the IFC reports and accepts it
+FLAME_HEIGHT_OFF = 0
+FLAME_HEIGHT_MIN = 1
+FLAME_HEIGHT_MAX = 6
+
+# Entity key of the burner, shared by the climate entity and the migration that
+# clears out the light entity it used to be.
+FLAME_KEY = "flame"
+
 # Entity keys that were part of the legacy `<ble_name>_<key>` unique ID scheme.
 # This list is deliberately frozen: it exists only to recognise IDs written before
 # the switch to `<address>_<key>`, so keys added later never belong in it.
